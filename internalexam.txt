@@ -1,0 +1,18 @@
+sqlite> .open my.db
+sqlite> create product01 table(userid,pid int primary key,pname,prate,pqty);
+Error: near "product01": syntax error
+sqlite> create product01(userid,pid int primary key,pname,prate,pqty);
+Error: near "product01": syntax error
+sqlite> create table product01(userid,pid int primary key,pname,prate,pqty);
+sqlite> insert into product01 values(1,101,'TV',25000,'medium');
+sqlite> insert into product01 values(2,102,'PHONE',15000,'low');
+sqlite> insert into product01 values(3,103,'AC',35000,'high');
+sqlite> insert into product01 values(4,104,'BUDS',4000,'low');
+sqlite> insert into product01 values(5,105,'REFRIGERATOR',40000,'premium');
+sqlite> select * from product01;
+1|101|TV|25000|medium
+2|102|PHONE|15000|low
+3|103|AC|35000|high
+4|104|BUDS|4000|low
+5|105|REFRIGERATOR|40000|premium
+sqlite>
